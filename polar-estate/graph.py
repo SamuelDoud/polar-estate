@@ -22,7 +22,7 @@ class graph(object):
         matrix = []
         for type_of in self.types:
             matrix = self.get_locations_by_type(type_of)
-
+        return matrix
     def get_locations_by_type(self,type_of_place):
         headers = ['Type', 'Name', 'lat_long','theta','rating', 'distance']
         names_of_places = self.client.places(type_of_place, location=self.address, radius=self.radius)
@@ -52,8 +52,8 @@ class graph(object):
         list_of_dicts = []
         for structured_data in total_structured_data:
             list_of_dicts.append(self.convert_to_dictionary(headers, structured_data))
-        print(locations)
-        print(names_of_places)
+        #print(locations)
+        #print(names_of_places)
         return list_of_dicts
 
     def convert_to_dictionary(self,keys, values):
