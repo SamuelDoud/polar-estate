@@ -25,7 +25,7 @@ class graph(object):
         return matrix
     def get_locations_by_type(self,type_of_place):
         headers = ['Type', 'Name', 'lat_long','theta','rating', 'distance']
-        names_of_places = self.client.places(type_of_place, location=self.address, radius=self.radius)
+        names_of_places = self.client.places(type_of_place, location=self.lat_long, radius=self.radius)
         #print(names_of_places)
         lat_long_pairs = []
         total_structured_data = []
