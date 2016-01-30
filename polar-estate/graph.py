@@ -21,12 +21,12 @@ class graph(object):
     def get_locations(self):
         matrix = []
         for type_of in self.types:
-            matrix = self.get_locations_by_type(type_of)
+            matrix.extend(self.get_locations_by_type(type_of))
         return matrix
     def get_locations_by_type(self,type_of_place):
         headers = ['Type', 'Name', 'lat_long','theta','rating', 'distance']
         names_of_places = self.client.places(type_of_place, location=self.address, radius=self.radius)
-        print(names_of_places)
+        #print(names_of_places)
         lat_long_pairs = []
         total_structured_data = []
         for place in names_of_places['results']:
