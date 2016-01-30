@@ -9,7 +9,7 @@
     def get_all_locations(self):
         """gets all the locations of all the types from a Google Maps API call (or set of calls). Returns a list of lists indexed by type of location"""
         for type_of_location in self.types_of_interesting_points:
-            self.list_of_locations_indexed_by_type.append(super.get_locations(type_of_location)) #add the list of this type to the list of all lists   
+            self.list_of_locations_indexed_by_type.append(self.get_locations(type_of_location)) #add the list of this type to the list of all lists   
     def get_locations(super, type_of_location):
         #get a list of a type (ex. gas station) from the origin address
         #be sure to cull by max_distance
