@@ -27,11 +27,11 @@ class graph(object):
         headers = ['Type', 'Name', 'lat_long','theta','rating', 'distance']
         names_of_places = self.client.places(type_of_place, location=self.lat_long, radius=self.radius)
         #print(names_of_places)
-        lat_long_pairs = []
+        lat_long_pairs = [] #this holds the lat long pair
         total_structured_data = []
         for place in names_of_places['results']:
-            temp = place['geometry']
-            this_lat_long_pair = temp['location']
+            geometry_data = place['geometry'] #geometry_data is whatever Google considers to be related to lat/long
+            this_lat_long_pair = geometry_data['location']
             lat_long_pairs.append(this_lat_long_pair)
             name = place['name']
             try:
@@ -43,7 +43,6 @@ class graph(object):
             structured_data.append(this_lat_long_pair)
             structured_data.append(self.get_theta(this_lat_long_pair))
             structured_data.append(rating)
-            
             total_structured_data.append(structured_data)
         locations = self.client.distance_matrix(self.address, lat_long_pairs) #this gets the real distance of the places from the location
         row_data = locations['rows'][0]
