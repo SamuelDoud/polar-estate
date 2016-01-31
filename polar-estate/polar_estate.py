@@ -8,7 +8,7 @@ import graph
 #should I be the interface for the frontend-backend communications?
 #probably a dispatcher
 class CollectionDispatch(object):
-    def __init__(self, base_addresses, types_of_locations, weights_for_types_of_locations, max_unit, time_or_distance):
+    def __init__(self, base_addresses, types_of_locations, radius):
         self.base_addresses = base_addresses
         self.types_of_locations = types_of_locations
         self.weights_for_types_of_locations = weights_for_types_of_locations

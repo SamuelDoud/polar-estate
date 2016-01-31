@@ -1,5 +1,6 @@
 ﻿import graph
 import polar_estate
+import parser
 
 base_addresses = ["4020 Calvert St. NW Washington DC", "4400 Massachusetts AVE NW Washington DC"]
 types_of_locations = ["bars","parks", "chruches", "hospitals"]
