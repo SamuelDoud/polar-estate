@@ -1,7 +1,8 @@
 ﻿import json
 import googlemaps
 import math
-
+def test():
+    return 1
 class graph(object):
     """This class creates an object that represents a single graph and the data associated with that graph.
     This class does not attempt to analzye the data within it. It only offers up its display and its member's data"""

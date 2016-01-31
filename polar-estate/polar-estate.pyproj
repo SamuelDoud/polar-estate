@@ -34,7 +34,7 @@
     <Compile Include="polar_estate.py" />
     <Compile Include="server\Dserver\admin.py" />
     <Compile Include="server\Dserver\models.py" />
-    <Compile Include="parser.py">
+    <Compile Include="handler.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="server\Dserver\tests.py" />
