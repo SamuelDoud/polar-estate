@@ -14,7 +14,7 @@ class graph(object):
         self.address = origin_address
         self.types = types_of_interesting_points
         self.radius = max_distance #should be used to limit how far we search out
-        self.geocode_base() #fetches the coordinates of this base address
+        self.geocode_base() #fetches the coordinates of ths base address
         self.list_of_locations = self.get_locations()
 
     def geocode_base(self):

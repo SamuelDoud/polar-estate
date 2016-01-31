@@ -1,10 +1,13 @@
-﻿import graph
+﻿#!/usr/bin/python   
+print('Content-type: text/html\r\n\r')
+
+import graph
 
 #hello team, this is the "main" file of the backend
 #I am just a holding class
 #should I be the interface for the frontend-backend communications?
 #probably a dispatcher
-class ColectionDispatch(object):
+class CollectionDispatch(object):
     def __init__(self, base_addresses, types_of_locations, weights_for_types_of_locations, max_unit, time_or_distance):
         self.base_addresses = base_addresses
         self.types_of_locations = types_of_locations

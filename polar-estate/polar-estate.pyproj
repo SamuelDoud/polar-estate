@@ -25,10 +25,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="API.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="graph.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="polar_estate.py" />
+    <Compile Include="server\Dserver\admin.py" />
+    <Compile Include="server\Dserver\models.py" />
+    <Compile Include="parser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\Dserver\tests.py" />
+    <Compile Include="server\Dserver\views.py" />
+    <Compile Include="server\Dserver\__init__.py" />
+    <Compile Include="server\manage.py" />
+    <Compile Include="server\server\settings.py" />
+    <Compile Include="server\server\urls.py" />
+    <Compile Include="server\server\wsgi.py" />
+    <Compile Include="server\server\__init__.py" />
     <Compile Include="test.py">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="server\" />
+    <Folder Include="server\Dserver\" />
+    <Folder Include="server\server\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
