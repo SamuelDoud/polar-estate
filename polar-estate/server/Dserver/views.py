@@ -22,7 +22,7 @@ def API(request): #name of the view = current_datetime
 
 	print >> sys.stderr, request[start], request[end-1]
 
-	if request[start] == '{' and request[end-1] == '}':
+	if request[start] == '(' and request[end-1] == ')':
 		query_string = request[start:end]
 
 
@@ -33,9 +33,9 @@ def API(request): #name of the view = current_datetime
 
 		#this converts the string rep of the dict to a dict
 		try:
-			dict=ast.literal_eval(query_string)
+			list=ast.literal_eval(query_string)
 		except ValueError:
-			return HttpResponse("improperly formatted dictionary")
+			return HttpResponse("improperly formatted list")
 
 		print >> sys.stderr, "API Query: ", query_string
 
