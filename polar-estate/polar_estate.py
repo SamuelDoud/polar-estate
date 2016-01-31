@@ -1,7 +1,4 @@
-﻿#!/usr/bin/python   
-print('Content-type: text/html\r\n\r')
-
-import graph
+﻿import graph
 
 #hello team, this is the "main" file of the backend
 #I am just a holding class
