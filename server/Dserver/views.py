@@ -55,3 +55,7 @@ def API(request): #name of the view = current_datetime
 		return HttpResponse("null and/or void query")
 
 	
+def UI(request):
+	with open('/Users/erussenbergerrosica2011/Development/Hackathons/polar-estate/front_endv2.html', 'r') as content_file:
+		html = content_file.read()
+		return HttpResponse(html)
